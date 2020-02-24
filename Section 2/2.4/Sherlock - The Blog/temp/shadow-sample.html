@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id='content'>
+        <!-- Shadow DOM starts here -->
+        <shadow-area>
+            <style>
+                h1 {
+                    background: 'red';
+                    color: #fff;
+                }
+            </style>
+            <h1 id='header'>This will take the red background styling.</h1>
+        </shadow-area>
+        <!-- Shadow DOM ends here -->
+        <h1 id='header'>This will NOT take the red background styling.</h1>
+    </div>
+</body>
+</html>

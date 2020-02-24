@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sherlock Holmes - The Blog</title>
+</head>
+<body>
+    <template id='card-template'>
+        <style>
+            .card {
+                border: 1px solid #ddd;
+                width: 200px;
+                padding: 10px;
+            }
+
+            .header {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .content {
+                margin-top: 10px;
+            }
+        </style>
+        <div class='card'>
+            <div class='header'>
+                <p class='title'></p>
+                <span class='subtitle'></span>
+            </div>
+            <div class='content'>
+                <span class='synopsis'></span>
+            </div>
+        </div>
+    </template>
+    <blog-card></blog-card>
+    <script src='./scripts/blog-card.js'></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+.wrapper {
+  opacity: 1;
+  transition: visibility 0s, opacity 0.25s ease-in;
+}
+
+.wrapper:not(.open) {
+  visibility: hidden;
+}
+
+.modal {
+  position: fixed;
+  z-index: 500;
+  background-color: white;
+  width: 70%;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px black;
+  padding: 16px;
+  left: 15%;
+  top: 30%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  width: 100%;
+}
+
+.close {
+  margin: 0;
+  position: absolute;
+  top: 6%;
+  right: 2%;
+  cursor: pointer
+}
+
+.header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.title {
+  font-size: 24px;
+  color: orange;
+}
+
+.subtitle {
+  color: #444;
+  font-size: 15px;
+}
+
+.body {
+  padding-top: 10px;
+    overflow-y: scroll;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover {
+  align-self: center;
+}
+

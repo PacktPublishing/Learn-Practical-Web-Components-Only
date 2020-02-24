@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>sherlock-blog</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but sherlock-blog doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+
+    <template id='card-template'>
+      <style>
+          .card {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              border: 1px solid #ddd;
+              width: 80%;
+              height: 400px;
+              box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+              background-color: #fff;
+              justify-content: space-evenly;
+              border-radius: 10px;
+              cursor: pointer;
+          }
+
+          .header {
+              height: 300px;
+              width: 100%;
+              border-bottom: 1px solid #ddd;
+          }
+
+          .content {
+              box-sizing: border-box;
+              width: 100%;
+              margin: 0;
+              padding: 0 10px;
+          }
+          .cover {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+          }
+
+          .title {
+              margin: 0;
+              font-size: 20px;
+          }
+
+          .subtitle {
+              color: #666;
+              font-size: 15px;
+          }
+      </style>
+      <div class='card'>
+          <div class='header'>
+              <img class='cover' src='' />
+          </div>
+          <div class='content'>
+              <p class='title'></p>
+              <span class='subtitle'></span>
+          </div>
+      </div>
+  </template>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

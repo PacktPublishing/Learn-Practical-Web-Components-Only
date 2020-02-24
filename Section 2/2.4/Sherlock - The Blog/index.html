@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sherlock Holmes - The Blog</title>
+    <link rel='stylesheet' href='./styles/index.css' />
+</head>
+<body>
+    <template id='card-template'>
+        <link rel='stylesheet' href='./styles/blog-card.css' />
+        <style>
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 1px solid #ddd;
+                width: 80%;
+                height: 400px;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                background-color: #fff;
+                justify-content: space-evenly;
+                border-radius: 10px;
+            }
+            
+            .title {
+                margin: 0;
+                font-size: 20px;
+            }
+
+            .subtitle {
+                color: #666;
+                font-size: 15px;
+            }
+        </style>
+        <div class='card'>
+            <div class='header'>
+                    <img class='cover' src='' />
+            </div>
+            <div class='content'>
+                <p class='title'></p>
+                <span class='subtitle'></span>
+            </div>
+        </div>
+    </template>
+    <template id='modal-template'>
+        <style>
+            .modal {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                border: 1px solid #ddd;
+                background-color: #fff;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+        </style>
+        <div class='modal'>
+            <div class='title'></div>
+            <div class='content'></div>
+        </div>
+    </template>
+    <!-- <blog-modal title='Title' content='Lorem Ipsum'></blog-modal> -->
+    <!-- <div>
+        <blog-card></blog-card>
+    </div> -->
+    <header class='navbar'>Sherlock Holmes - The Blog</header>
+    <div class='card'></div>
+    <div id='blog-cards-container'></div>
+    <script src='./scripts/blog-card.js'></script>
+    <script src='./scripts/blog-modal.js'></script>
+    <script>
+        // setTimeout(function() {
+        //     document.getElementsByTagName('blog-modal')[0].setAttribute["title", 'Endapa'];
+        //     console.log('Here');
+        // }, 2000)
+
+        const titles = [
+            {title: 'The Five Orange Pips', subtitle: 'A delivery of innocous letter followed by death.', cover: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Sherlock_Holmes_in_The_Five_Orange_Pips.jpg'},
+            {title: 'A Study in Scarlet', subtitle: 'Dr. John Watson meets Mr. Sherlock Holmes.', cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/A_study_in_scarlet%2C_Plate_1.png/640px-A_study_in_scarlet%2C_Plate_1.png'},
+            {title: 'The Hound of the Baskervilles', subtitle: 'A mysterious hound terrifies a town.', cover: 'https://www.oldbookillustrations.com/wp-content/uploads/2018/11/hound-baskervilles.jpg'}
+        ]
+
+        titles.forEach(title => {
+            console.log(title);
+            let node = document.createElement('blog-card')
+            node.setAttribute('title', title.title);
+            node.setAttribute('subtitle', title.subtitle)
+            node.setAttribute('cover', title.cover);
+            // document.getElementById('blog-cards-container').appendChild(`<blog-card title="${title.title}" subtitle="${title.subtitle}" cover="${title.cover}"></blog-card>`)
+            document.getElementById('blog-cards-container').appendChild(node);
+        })
+    </script>
+</body>
+</html>
+
+<!-- Move data outside -->
+<!-- Add images to data -->
+<!-- Run a for loop and call blog-card for every row of data -->
+<!-- Send data via attributes -->
+<!-- Apply style to the outer div and then inner cards -->
+<!-- Apply style to modals -->

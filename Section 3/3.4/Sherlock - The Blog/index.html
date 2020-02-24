@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sherlock Holmes - The Blog</title>
+    <link rel='stylesheet' href='./styles/index.css' />
+</head>
+<body>
+    <template id='card-template'>
+        <link rel='stylesheet' href='./styles/blog-card.css' />
+        <style>
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 1px solid #ddd;
+                width: 80%;
+                height: 400px;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                background-color: #fff;
+                justify-content: space-evenly;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            
+            .title {
+                margin: 0;
+                font-size: 20px;
+            }
+
+            .subtitle {
+                color: #666;
+                font-size: 15px;
+            }
+        </style>
+        <div class='card'>
+            <div class='header'>
+                    <img class='cover' src='' />
+            </div>
+            <div class='content'>
+                <p class='title'></p>
+                <span class='subtitle'></span>
+            </div>
+        </div>
+    </template>
+    <template id='modal-template'>
+        <link rel='stylesheet' href='./styles/blog-modal.css' />
+        <div class='wrapper' class='open'>
+            <div class='overlay'>
+                <div class='modal'>
+                    <div class='loader'></div>
+                    <p class='close'>X</p>
+                    <div class='header'>
+                        <div class='title'>Loading...</div>
+                        <div class='subtitle'></div>
+                    </div>
+                    <div class='body'>
+                        <img class='cover' src='' />
+                        <div class='synopsis'>Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <blog-modal></blog-modal>
+    <header class='navbar'>Sherlock Holmes - The Blog</header>
+    <div class='card'></div>
+    <div id='blog-cards-container'></div>
+    <!-- <div class='loader'></div> -->
+    <script src='./scripts/blog-card.js'></script>
+    <script src='./scripts/blog-modal.js'></script>
+    <script>
+        const titles = [
+            {
+                title: 'The Five Orange Pips', 
+                subtitle: 'A delivery of innocous letter followed by death.', 
+                cover: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Sherlock_Holmes_in_The_Five_Orange_Pips.jpg', 
+                synopsis: "In ''The Five Orange Pips,'' Sherlock Holmes and Dr. Watson are visited by a young man named John Openshaw. He asks Holmes to help him with ''a hereditary matter'' that endangers his life.John explains that his uncle, Elias, emigrated to the U.S. and became a planter, or plantation owner, in Florida. Before the American Civil War in 1861 to 1865, planters in the South owned large farming tracts, profiting from crops produced using African slave labor. The KKK, or Ku Klux Klan, is a white supremacist terrorist organization founded in 1866 out of Southern white retaliation against Northern efforts to create equality for blacks. After the war, the wealthy Elias returned to England, supposedly because he agreed with the KKK. A reclusive drunk, he ignored family and friends. He did like his nephew, John, who lived with him for several years. John recalls a locked attic room containing a brass box. One day, Elias received an envelope bearing the acronym 'KKK' and containing five orange pips, which are basically seeds. Panicking, he immediately created a will leaving his entire estate to John's father, Joseph. He burned the paper contents of the box and was found dead one day face down in a shallow garden pool. There was no sign of foul play, but John knows it wasn't an accident or suicide. Joseph inherited the estate first and opened the attic room and empty brass box. It was labeled as containing KKK-related letters, receipts, and a register, which incriminated some organization members. After one year, a bewildered Joseph also received an envelope containing five orange pips and instructions to ''put the papers on the sundial'' in the garden. However, the papers had already been destroyed. Five days later, Joseph was found dead, having fallen and shattered his skull in a chalk pit while visiting a friend. Again, John knows it was murder."
+            },
+            {
+                title: 'A Study in Scarlet', 
+                subtitle: 'Dr. John Watson meets Mr. Sherlock Holmes.', 
+                cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/A_study_in_scarlet%2C_Plate_1.png/640px-A_study_in_scarlet%2C_Plate_1.png',
+                synopsis: "A Study in Scarlet begins with Dr. John Watson, the narrator, settling in London to recover from a wound and illness he sustained while acting as a military doctor during the Second Afghan War. One day he runs into an acquaintance, Stamford, while at a bar. Watson confides in his friend that he needs a new living arrangement, as his previous one was too expensive. Stamford responds that another friend of his has also expressed this desire, and takes Watson to the university laboratory where his friend –Sherlock Holmes –is working on an experiment. Stamford gives some background information on Holmes, such as the fact that his true profession is unknown, that he is eccentric and brilliant, and that his knowledge is specialized but diverse. After discussing their personal idiosyncrasies, Holmes and Watson decide to live together. Watson watches the enigmatic Holmes and notes his strange behavior and interests. The living arrangement proves itself pleasant for both men. One morning Watson notices an article about the art of deduction based on observation. The tiniest detail can yield a multiplicity of information. Watson scoffs at this theory, but is surprised to learn that Holmes was the article's author. Holmes explains that he is a consulting detective; his powers of rational, reasoned observation and deduction allow him to help clients and even solve crimes. He laments that there have been very few good cases of late."
+            },
+            {
+                title: 'The Hound of the Baskervilles', 
+                subtitle: 'A mysterious hound terrifies a town.', 
+                cover: 'https://www.oldbookillustrations.com/wp-content/uploads/2018/11/hound-baskervilles.jpg',
+                synopsis: "This adventure concerns the mysterious death of Sir Charles Baskerville, and the possibility that the heir to his fortune might be the object of murder. Before the novel begins, Sir Charles Baskerville had died suddenly, perhaps the victim of a ghostly hound believed to haunt his family because of an age-old curse. The Baskerville estate is located out in the remote moor of Devonshire. Holmes and Watson are introduced to the case by Dr. Mortimer, a friend of Sir Charles Baskerville. Mortimer believes that a hound has in fact killed Sir Charles, because he found a paw print near Sir Charles's corpse. He is worried that there may be some truth to the superstitious legend, which is detailed in an old manuscript, and thus approaches Holmes in hopes that the detective can protect Sir Henry, who is soon to arrive to claim the family estate and fortune. When Sir Henry arrives in London, he exhibits no fear of the old legend. Instead, he insists on leaving soon for Baskerville Hall. However, several strange things happen while he is in London: an anonymous letter arrives, warning him to stay away from the moor; two boots are stolen from his hotel, each from a different pair; and Holmes observes a bearded man following him around the city. Certain that something insidious is afoot, Holmes sends Watson to Devonshire, where he is to accompany and protect Sir Henry while Holmes wraps up some business in London."
+            }
+        ]
+
+        titles.forEach(title => {
+            let node = document.createElement('blog-card')
+            node.setAttribute('title', title.title);
+            node.setAttribute('subtitle', title.subtitle)
+            node.setAttribute('cover', title.cover);
+            document.getElementById('blog-cards-container').appendChild(node);
+        })
+
+        let cards = document.getElementsByTagName('blog-card');
+        [...cards].forEach(card => {
+            card.addEventListener('click', () => {
+                let currentBlog = titles.filter(title => title.title === card.getAttribute('title'));
+                let blogModal = document.querySelector('blog-modal');
+                blogModal.setAttribute('open', true);
+                blogModal.setAttribute('title', card.getAttribute('title'));
+                blogModal.setAttribute('subtitle', card.getAttribute('subtitle'));
+                blogModal.setAttribute('synopsis', currentBlog[0].synopsis);
+                blogModal.setAttribute('cover', currentBlog[0].cover);
+            })
+        })
+    </script>
+</body>
+</html>
+
+<!-- Finish the close functionality -->
+<!-- Change card information to title and subtitle -->
+<!-- Change modal variable to subtitle -->
+<!-- Add story to data -->
+<!-- Modify structure of blog-modal -->
+<!-- Add styles to blog-modal and blog-card -->
