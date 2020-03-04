@@ -6,8 +6,7 @@ This is the code repository for [Learn Practical Web Components Quickly [Video]]
  
 
 ## About the Video Course
-	In this course, we introduce you to the world of web components, a fairly new concept that has simplified coding for web developers. Web components allow you to create custom and reusable HTML tags that will work across modern web browsers and can be used with any JavaScript library or web framework that works with HTML.
-
+In this course, we introduce you to the world of web components, a fairly new concept that has simplified coding for web developers. Web components allow you to create custom and reusable HTML tags that will work across modern web browsers and can be used with any JavaScript library or web framework that works with HTML.
  
 
 <H2>What You Will Learn</H2>
@@ -29,9 +28,7 @@ This is the code repository for [Learn Practical Web Components Quickly [Video]]
 
 ## Instructions and Navigation
 ### Assumed Knowledge
-	Web developers laboring under the need to write unnecessary code or students keen to learn what web development will look like in the future will benefit from this course! Basic HTML, CSS, and JavaScript knowledge is a must! You need to have at least a basic idea of ES6 concepts such as const, let, classes, map, filters, and so on. A basic understanding of JavaScript frameworks such as Angular, React, and Vue would be beneficial in order to gain a full understanding of web component integration aspects
-
- 
+Web developers laboring under the need to write unnecessary code or students keen to learn what web development will look like in the future will benefit from this course! Basic HTML, CSS, and JavaScript knowledge is a must! You need to have at least a basic idea of ES6 concepts such as const, let, classes, map, filters, and so on. A basic understanding of JavaScript frameworks such as Angular, React, and Vue would be beneficial in order to gain a full understanding of web component integration aspects.	 
 
 ### Technical Requirements
 This course has the following requirements:<br/>
@@ -49,7 +46,7 @@ Hardware Requirements: Modern laptop or desktop <br/>
 
 
 ## Related Products
-* [Three.js 3D Graphics for the Web: Tips, Tricks, and Techniques [Video]] https://www.packtpub.com/game-development/three-js-3d-graphics-for-the-web-tips-tricks-and-techniques-video)
+* [Three.js 3D Graphics for the Web: Tips, Tricks, and Techniques [Video]](https://www.packtpub.com/game-development/three-js-3d-graphics-for-the-web-tips-tricks-and-techniques-video)
 
  
 
