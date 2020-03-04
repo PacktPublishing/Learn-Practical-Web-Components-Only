@@ -49,7 +49,7 @@ Hardware Requirements: Modern laptop or desktop <br/>
 
 
 ## Related Products
-* [Three.js 3D Graphics for the Web: Tips, Tricks, and Techniques [Video]]https://www.packtpub.com/game-development/three-js-3d-graphics-for-the-web-tips-tricks-and-techniques-video)
+* [Three.js 3D Graphics for the Web: Tips, Tricks, and Techniques [Video] https://www.packtpub.com/game-development/three-js-3d-graphics-for-the-web-tips-tricks-and-techniques-video)
 
  
 
