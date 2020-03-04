@@ -1,4 +1,4 @@
-# THREE.js-Tips-Tricks-Techniques
+# Learn Practical Web Components Quickly
 This is the code repository for [Learn Practical Web Components Quickly [Video]](https://www.packtpub.com/web-development/learn-practical-web-components-quickly-video), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the video course from start to finish.
 
  
